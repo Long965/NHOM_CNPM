@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.left, .right {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+
+.center {
+    width: 60%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.left p, .right p {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.methods {
+    padding: 10px 0;
+}
+
+.methods div {
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.methods div:hover {
+    background-color: #f0f0f0;
+}
+
+.fa-solid {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #aaa;
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+}
+
+.card-details p {
+    margin-bottom: 0px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    outline: none;
+    line-height: 1.5;
+}
+
+.c-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cc-exp, .cc-cvv {
+    width: 100%;
+    margin: right 15px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background-color: greenyellow;
+    color: #444;
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+    color: white;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.details {
+    padding-top: 10px;
+}

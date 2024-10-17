@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="acc.css"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Quản lý tài khoản</title>
+</head>
+<body>
+    <form action=" " method="post" id="signin" onsubmit="return validatePassword()" >
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <img id="profileImage" src="bg.jpg" alt="Ảnh đại diện">
+                <p>thanh_nhi_0505</p>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <button id="upload" onclick="document.getElementById('fileInput').click();"><i class="fa-solid fa-pen"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li onclick="showSection('ho_so', this)">Hồ sơ của tôi</li>
+                    <li onclick="showSection('vi_thanh_toan', this)">Ví thanh toán</li>
+                    <li onclick="showSection('doi_mat_khau', this)">Đổi mật khẩu</li>
+                    <li onclick="showSection('tro_giup', this)">Trung tâm trợ giúp</li>
+                </ul>
+            </nav>
+        </div>
+ 
+        <div class="content">
+            <div id="ho_so" class="section active">
+                <h2 style="text-align: center;">Hồ Sơ Của Tôi</h2>
+                <p style="text-align: center;">Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" value="thanh_nhi_0505" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="name">Họ tên</label>
+                    <input type="text" id="name" value="thanh nhi">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="co*********@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" value="********32">
+                </div>
+                <div class="form-group">
+                    <label>Giới tính</label>
+                    <div class="gender">
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">Nam</label>
+                        <input type="radio" name="gender" value="female" id="female" checked>
+                        <label for="female">Nữ</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Ngày sinh</label>
+                    <input type="text" id="birthday" value="**/07/20**">
+                </div>
+                <button type="submit" class="save-button">Cập nhật</button>
+            </div>
+
+            <div id="vi_thanh_toan" class="section">
+                <h2 style="text-align: center;">Ví thanh toán</h2>
+                
+            </div>
+
+            <div id="doi_mat_khau" class="section">
+                <h2 style="text-align: center;" >Đổi mật khẩu</h2>
+                <p style="text-align: center;margin-bottom: 5pc; ">Cập nhật và xác thực mật khẩu người dùng</p>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" class="toggle-password" placeholder="Mật khẩu" required>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="passwordnew">Mật khẩu mới</label>
+                    <input type="password" id="passwordnew" class="toggle-password" placeholder="Mật khẩu mới" required>
+                   
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Xác nhận mật khẩu mới</label>
+                    <input type="password" id="confirm_password" class="toggle-password" placeholder="Xác nhận mật khẩu mới" required>
+                  
+                </div>
+               
+                <button type="submit" class="save-button">Cập nhật</button>
+                <h3 style="text-align: center;">🌷🌷🌷🌷🌷</h3>
+            </div>
+
+            <div id="tro_giup" class="section">
+                <h2 style="text-align: center;" >Trung tâm trợ giúp</h2>
+                <p style="text-align: center; margin-bottom: 5pc;">Liên hệ admin qua các kênh sau nếu cần giúp đỡ</p>
+               
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="FlowerExchange@gmail.com" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" value="1900 1021" disabled >
+                </div>
+                <h3 style="text-align: center;">🌷🌷🌷🌷🌷</h3>
+            </div>
+
+        </div>
+    </div>
+</form>
+    <script>
+        // JavaScript để điều khiển việc hiển thị các phần
+        function showSection(sectionId, element) {
+            // Ẩn tất cả các phần
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Hiển thị phần đã chọn
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Xóa lớp active khỏi tất cả các mục
+            var navItems = document.querySelectorAll('.sidebar nav ul li');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Thêm lớp active cho mục đang được chọn
+            element.classList.add('active');
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0]; // Lấy tệp đã chọn
+            const reader = new FileReader(); // Tạo FileReader để đọc tệp
+
+            reader.onload = function(e) {
+                document.getElementById('profileImage').src = e.target.result; // Cập nhật ảnh đại diện
+            };
+
+            if (file) {
+                reader.readAsDataURL(file); // Đọc tệp dưới dạng URL dữ liệu
+            }
+        });
+    </script>
+</body>
+</html>

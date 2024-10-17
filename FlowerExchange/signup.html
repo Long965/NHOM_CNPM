@@ -1,0 +1,58 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf=8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="dangky.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="hienmk.js"></script>
+    <script src="script.js"></script>
+    </style>
+</head>
+<body>
+    <div class="wrapper" style="transform: translateY(-10px);">
+        <form action=" " method="post" id="signin" onsubmit="return validatePassword()" >
+            <h1  >REGISTER</h1>
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" class="toggle-password" placeholder="Mật khẩu " required>
+                <div class="eye">
+                    <i class="fa-regular fa-eye-slash"  style="font-size: 15px;  transform: translate3d(110px, -34px, 0);cursor: pointer;  "></i>
+                </div>
+            </div>
+            <div class="input-box" style="position: relative;">
+                <i class="fa-solid fa-rotate-right"></i>
+                <input type="password" id="confirm_password" class="toggle-password" placeholder="Xác nhận mật khẩu" required>
+                <div class="eye" style="position: absolute; right: -100px; top: 40%; transform: translateY(-70%); cursor: pointer;">
+                    <i class="fa-regular fa-eye-slash"  style="font-size: 15px;"></i>
+                </div>
+            </div>
+            <div id="error-message" style="color: red; display: none;"> <br> Lỗi!!!</div>
+            <div class="role-selection" style=" transform: translate3d(10px, 13px, 0);">
+                <input type="radio" id="saler" name="role" value="saler" checked>
+                <label for="saler" class="role-label">I'm a saler</label>
+                <input type="radio" id="buyer" name="role" value="buyer">
+                <label for="buyer" class="role-label">I'm a buyer</label>
+            </div>
+            <button type="submit" class="butt">Đăng ký</button>
+    </div>
+
+    </form>
+    </div>
+    
+</body>
+
+</html>

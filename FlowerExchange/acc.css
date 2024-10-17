@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.sidebar {
+    width: 250px;
+    height: 43pc;
+    background-color: rgb(207, 201, 201);
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.profile-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin-bottom: 10px;
+}
+.profile-section p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#upload {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    outline: none; 
+    transform: translate3d(50px,-160px,0);
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+nav ul li.active {
+    font-weight: bold; /* Tô đậm */
+    color: #007bff; /* Thay đổi màu sắc */
+}
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+.section {
+    display: none; /* Ẩn tất cả các phần nội dung ban đầu */
+}
+.section.active {
+    display: block; /* Hiển thị phần nội dung được chọn */
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative; /* Để căn chỉnh biểu tượng */
+}
+
+/* CSS cho biểu tượng hiển thị/ẩn mật khẩu */
+.eye {
+    cursor: pointer; /* Con trỏ khi di chuột qua */
+}
+
+.eye i {
+    font-size: 15px; /* Kích thước biểu tượng */
+}
+.save-button {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block; /* Đặt thành block để margin auto có hiệu lực */
+    margin: 20px auto; /* Căn giữa nút với margin tự động */
+}
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+.gender label {
+    margin-bottom: 30px;
+    transform: translate3d(-50px,16px,0);
+}

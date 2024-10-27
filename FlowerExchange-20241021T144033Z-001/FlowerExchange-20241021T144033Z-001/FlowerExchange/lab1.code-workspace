@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../OneDrive/Desktop/pttkgt/lab1"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"vector": "cpp",
+			"bai8": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "FlowerExchange"
+	}
+}

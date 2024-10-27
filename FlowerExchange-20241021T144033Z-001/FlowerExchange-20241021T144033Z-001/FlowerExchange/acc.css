@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  /* Header */
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(168, 26, 26, 0.1);
+  }
+  .site-header .logo {
+    display: flex;
+    align-items: center;
+  }
+  .site-header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .site-header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  .main-nav {
+    margin-left: auto;
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  .main-nav ul li a {
+    font-size: 20px;
+    color: #333;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  /* Layout */
+  .consider {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .sidebar {
+    width: 250px;
+    height: 43pc;
+    background: rgb(207, 201, 201);
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  .profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .profile-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin-bottom: 10px;
+  }
+  #upload {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transform: translate3d(50px, -160px, 0);
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  nav ul li.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Content */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+    border: 1px solid gray;
+  }
+  .section {
+    display: none;
+  }
+  .section.active {
+    display: block;
+  }
+  .title {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 14px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .save-button {
+    font-size: 15px;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+  }
+  

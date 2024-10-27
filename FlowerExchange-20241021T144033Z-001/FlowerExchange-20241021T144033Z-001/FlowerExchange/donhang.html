@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lí Đơn Hàng</title>
+    <link rel= "stylesheet" href="donhang.css">
+    <script defer>
+        let choxacnhan = () => {
+            alert ("Đơn hàng đã được xác nhận thành công!")
+        }
+        let cholayhang = () => {
+            alert ("Đơn hàng đã được giao cho đơn vị vận chuyển!")
+        }
+        let chovanchuyen= () => {
+            alert ("Đơn hàng đang trên đường vận chuyển!")
+        }
+        let chogiaohang= () => {
+            alert ("Đơn hàng đang trên đường vận chuyển. Chưa sẵn sàng giao đến bạn!")
+        }
+        let danhgia= () => {
+            alert ("Bạn có thể đánh giá sau khi đơn hàng được giao thành công!")
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Theo Dõi Đơn Hàng</h1>
+    </header>
+    <main>
+        <section class="order-details">
+            <h2>Chi Tiết Đơn Hàng</h2>
+
+            <li>Mã Đơn Hàng: <b>#123456</b></li>
+            <li>Tình Trạng: <b>Đang Vận Chuyển</b></li>
+        </section>
+        <section class="tracking">
+            <h2>Trạng Thái Đơn Hàng</h2>
+            <ul>
+                <div>
+                    <form>
+                        <img src="https://png.pngtree.com/png-clipart/20230418/original/pngtree-order-confirm-line-icon-png-image_9065104.png" width = 4%>
+                        <br>
+                        <span class="status">Chờ xác nhận</span>
+                        <input type ="button" value="Kiểm tra " onclick="choxacnhan() " >
+                    </form>
+                </div>
+                <div>
+                    <br>
+                    <form>
+                        <img src="https://media.istockphoto.com/id/1071903744/vi/vec-to/bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-d%C3%B2ng-b%C6%B0u-ki%E1%BB%87n-th%C3%B9ng-carton-g%C3%B3i-h%C3%A0ng-giao-h%C3%A0ng-v%E1%BA%ADn-chuy%E1%BB%83n-v%E1%BA%ADn-chuy%E1%BB%83n-kh%C3%A1i-ni%E1%BB%87m-h%E1%BA%ADu.jpg?s=612x612&w=0&k=20&c=psqHzRoKnsofTFuklpkrXsrVqvIYNJnfRc8-gCkeVEM=" width = 5%>
+                        <br>
+                        <span class="status">Chờ lấy hàng</span> 
+                        <input type ="button" value="Kiểm tra " onclick="cholayhang() " >                       
+                    </form>
+                </div>
+                <div>
+                    <br>
+                    <form>
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvoCC7AA4PuFNa6_XMGY5oZ-fy4Vk3IrGXA&s" width = 5%>
+                     <br>
+                    <span class="status">Chờ vận chuyển</span>
+                    <input type ="button" value="Kiểm tra " onclick="chovanchuyen() " >
+                    </form>
+                </div>
+                <div>
+                    <br>
+                    <form>                        
+                        <img src="https://file.hstatic.net/1000191021/file/8-icon-shipper_9355d76e20d746d99c4484f13f9ab446_grande.jpg" width = 5%>
+                        <br>
+                        <span class="status">Chờ giao hàng </span>
+                        <input  type ="button" value="Kiểm tra" onclick="chogiaohang()">
+                    </form>
+                </div>
+                <div>
+                    <br>
+                    <form>
+                        <img src="https://media.istockphoto.com/id/1406494264/vi/vec-to/bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91%C3%A1nh-gi%C3%A1-d%C3%B2ng-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91%C6%A1n-tuy%E1%BA%BFn-%C4%91%E1%BB%81-xu%E1%BA%A5t-v%C3%A0-ph%C3%AA-b%C3%ACnh-tr%C3%B2-chuy%E1%BB%87n-v%E1%BB%9Bi-kh%C3%A1ch-h%C3%A0ng.jpg?s=612x612&w=0&k=20&c=YzKJnXR2ICQVudaMXd79mQaxYFenAg0ZNjs4GUKgLMA=" width = 5%>
+                        <br>
+                        <span class="status">Đánh giá</span>
+                        <input type ="button" value="Kiểm tra " onclick="danhgia() " >
+                </form>
+                </div>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p> &copy; Thông tin về đơn hàng sẽ luôn được bảo mật.</p>
+    </footer>
+</body>
+</html>

@@ -36,6 +36,9 @@ namespace EventFlowerExchange
             builder.Services.AddScoped<IUserProfileService, UserProfileService>();
             builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
+            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
 
             // Configure JSON Options
             builder.Services.AddControllers()

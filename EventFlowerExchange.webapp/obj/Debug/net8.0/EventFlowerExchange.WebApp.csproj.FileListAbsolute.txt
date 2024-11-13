@@ -301,6 +301,7 @@ C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.w
 C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.webapp\obj\Debug\net8.0\EventFlowerExchange.WebApp.pdb
 C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.webapp\obj\Debug\net8.0\EventFlowerExchange.WebApp.genruntimeconfig.cache
 C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.webapp\obj\Debug\net8.0\ref\EventFlowerExchange.WebApp.dll
+<<<<<<< HEAD
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\appsettings.json
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\EventFlowerExchange.WebApp.exe
@@ -457,3 +458,5 @@ C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webap
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\bin\Debug\net8.0\WebDriver.dll
+=======
+>>>>>>> 568ba2feae52bf104ba53371718a67e457c4bfaf

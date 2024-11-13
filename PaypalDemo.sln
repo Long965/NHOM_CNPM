@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaypalDemo.Webapp", "Paypal\PaypalDemo.Webapp.csproj", "{11C9C61C-53BC-4C33-B368-CD1E01EA1DBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayPalRepositories.cs", "BusinessObject\PayPalRepositories.cs.csproj", "{59E753F1-8488-4686-880D-A94AEAE5FBAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayPalService.cs", "DataAccess\PayPalService.cs.csproj", "{D3A32703-9055-495E-9F1B-7A0E44C54A4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C9C61C-53BC-4C33-B368-CD1E01EA1DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C9C61C-53BC-4C33-B368-CD1E01EA1DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C9C61C-53BC-4C33-B368-CD1E01EA1DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C9C61C-53BC-4C33-B368-CD1E01EA1DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E753F1-8488-4686-880D-A94AEAE5FBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E753F1-8488-4686-880D-A94AEAE5FBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E753F1-8488-4686-880D-A94AEAE5FBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E753F1-8488-4686-880D-A94AEAE5FBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A32703-9055-495E-9F1B-7A0E44C54A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A32703-9055-495E-9F1B-7A0E44C54A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A32703-9055-495E-9F1B-7A0E44C54A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A32703-9055-495E-9F1B-7A0E44C54A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95EB2D48-C730-46CF-B4EE-A4DE96120440}
+	EndGlobalSection
+EndGlobal

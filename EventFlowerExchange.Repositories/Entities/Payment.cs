@@ -18,4 +18,6 @@ public partial class Payment
     public decimal? Amount { get; set; }
 
     public virtual Order? Order { get; set; }
+
+    public virtual ICollection<TransactionHistory> TransactionHistories { get; set; } = new List<TransactionHistory>();
 }

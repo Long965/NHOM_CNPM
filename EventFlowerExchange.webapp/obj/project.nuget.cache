@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZyuD42vFJKU=",
+  "dgSpecHash": "LCjt1yG6eH0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
+  "projectFilePath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PHILONG\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -47,6 +47,7 @@
     "C:\\Users\\PHILONG\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\PHILONG\\.nuget\\packages\\selenium.webdriver\\4.26.1\\selenium.webdriver.4.26.1.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\swashbuckle.aspnetcore\\6.9.0\\swashbuckle.aspnetcore.6.9.0.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.9.0\\swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
     "C:\\Users\\PHILONG\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.9.0\\swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512",

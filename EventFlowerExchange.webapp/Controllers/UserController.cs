@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventFlowerExchange.WebApp.Controllers
 {
-    public class UserController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
 
@@ -33,19 +35,28 @@ namespace EventFlowerExchange.WebApp.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto) // Cập nhật tham số thành LoginDto
         {
-            if (loginDto == null)
+            if (loginDto == null || string.IsNullOrEmpty(loginDto.Email) || string.IsNullOrEmpty(loginDto.Password))
             {
-                return BadRequest(new { message = "LoginDto is required." });
+                return BadRequest(new { message = "Email and password are required." });
             }
+
 
             try
             {
                 var token = await _userService.LoginAsync(loginDto);
-                return Ok(new { token });
+                return Ok(new
+                {
+                    message = "Login successfully",
+                    token
+                });
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized(new { message = "Invalid email or password." });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return StatusCode(500, new { message = "An error occurred during login.", error = ex.Message });
             }
         }
     }

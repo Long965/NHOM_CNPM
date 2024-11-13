@@ -934,6 +934,22 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Selenium.WebDriver/4.26.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Selenium.WebDriver.targets": {}
+        }
+      },
       "Swashbuckle.AspNetCore/6.9.0": {
         "type": "package",
         "dependencies": {
@@ -3095,6 +3111,28 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Selenium.WebDriver/4.26.1": {
+      "sha512": "f0t/Oo9l2aK+znAv/McTPSz6p0fSoIYMZpkHql1ndItqu1n6PGXE1XRhziVk2zwG3RBUzEfIr6r/emkl6sP63w==",
+      "type": "package",
+      "path": "selenium.webdriver/4.26.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Selenium.WebDriver.targets",
+        "buildTransitive/Selenium.WebDriver.targets",
+        "icon.png",
+        "lib/net8.0/WebDriver.dll",
+        "lib/net8.0/WebDriver.xml",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "manager/linux/selenium-manager",
+        "manager/macos/selenium-manager",
+        "manager/windows/selenium-manager.exe",
+        "selenium.webdriver.4.26.1.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.9.0": {
       "sha512": "lvI+XHF21tkwXd2nDCLGJsdhdUYsY3Ax2fWUlvw81Oa6EedtnIAf5tThy8ZnPcz/9/TwsLgjgtX9ifOCIjbEPA==",
       "type": "package",
@@ -3916,6 +3954,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
+      "Selenium.WebDriver >= 4.26.1",
       "Swashbuckle.AspNetCore >= 6.9.0",
       "System.IdentityModel.Tokens.Jwt >= 8.2.0"
     ]
@@ -3927,11 +3966,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
       "projectName": "EventFlowerExchange.WebApp",
-      "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
+      "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
       "packagesPath": "C:\\Users\\PHILONG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\obj\\",
+      "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3953,8 +3992,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
-              "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj"
+            "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
+              "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj"
             }
           }
         }
@@ -4005,6 +4044,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.10, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.26.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -68,10 +68,10 @@ namespace EventFlowerExchange.services.Services
             // Chuyển đổi User thành UserDto để trả về
             return new UserDto
             {
-                FullName = user.FullName,
-                Email = user.Email,
-                Role = user.Role,
-                Password = null // Không trả về mật khẩu
+                FullName = user.FullName!,
+                Email = user.Email!,
+                Role = user.Role!,
+                Password = null! // Không trả về mật khẩu
             };
         }
 
@@ -104,8 +104,9 @@ namespace EventFlowerExchange.services.Services
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email!),
+                new Claim(ClaimTypes.Role, user.Role!)
             }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

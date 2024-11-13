@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj": {}
+    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj": {
+    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj",
         "projectName": "EventFlowerExchange.Repositories",
-        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj",
+        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj",
         "packagesPath": "C:\\Users\\PHILONG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\obj\\",
+        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
+    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj",
+        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj",
         "projectName": "EventFlowerExchange.services",
-        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj",
+        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj",
         "packagesPath": "C:\\Users\\PHILONG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\obj\\",
+        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,8 +120,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj": {
-                "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj"
+              "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj": {
+                "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj"
               }
             }
           }
@@ -166,14 +166,14 @@
         }
       }
     },
-    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj": {
+    "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
         "projectName": "EventFlowerExchange.WebApp",
-        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
+        "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\EventFlowerExchange.WebApp.csproj",
         "packagesPath": "C:\\Users\\PHILONG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.webapp\\obj\\",
+        "outputPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -195,8 +195,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
-                "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Source code\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj"
+              "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj": {
+                "projectPath": "C:\\Users\\PHILONG\\Documents\\Tài liệu project\\Project\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj"
               }
             }
           }
@@ -247,6 +247,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.26.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

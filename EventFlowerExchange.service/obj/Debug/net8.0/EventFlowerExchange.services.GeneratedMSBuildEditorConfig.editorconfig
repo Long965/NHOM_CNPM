@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventFlowerExchange.services
-build_property.ProjectDir = C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.service\
+build_property.ProjectDir = C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.service\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Exchange</title>
+    <link rel="stylesheet" href="CartStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <ul class="header__logo">
+                    <li class="header__navbar_item"><h1>LOGO</h1></li>
+                </ul>
+                
+                <ul class="header__menu">
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/HomeAfterToLogin.html">HOME</a></li>
+                    <li class="header__navbar__list"><a href="#">ABOUT</a></li>
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/Order.html">ORDERS</a></li>
+                    <li class="header__navbar__list"><a href="#">CONTACT</a></li>
+                </ul>
+                <ul class="header__list">
+                    <li class="header__navbar_item header__navbar-user">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            <div class="header__user">
+                                <a class="header__user-item" href="#">Profile</a>
+                                <a class="header__user-item" href="#">Counter</a>
+                                <a class="header__user-item" href="#">Log out</a>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="container__methods">
+                <h1>PAYMENT METHODS</h1>
+                <div class="container__list">
+                    <li><a class="container__list-item container__list-item-1">
+                        <h4 class="container__list-item-1">Payment for card</h4>
+
+                    </a></li>
+                    <li><a class="container__list-item container__list-item-2">
+                        Momo
+                        <div class="Object__2">
+                            <h1>QUÉT MÃ THANH TOÁN</h1>
+                            <div class="payment__QR">
+                                <img src="./Cart/QR.jpg" alt="Đang tạo mã QR">
+                            </div>
+                       </div>
+                    </a></li>
+                    <li><a class="container__list-item container__list-item-3">
+                        <h4 class="container__list-item-3">Paypal</h4>
+                    </a></li>
+                </div>
+            </div>
+            <div class="container__payment-form">
+                
+                <form class="payment-form">
+                   <div class="Object__1">
+                    <div class="container__cart-img">
+                        <img src="./Cart/logo3.png" alt="PT1">
+                    </div>
+                        <label>Card Number:</label>
+                        <input type="text" placeholder="Enter card number">
+                        <div class="form-row">
+                            <div>
+                                <label>Expiry Date:</label>
+                                <input type="text" placeholder="MM/YY">
+                            </div>
+                            <div>
+                                <label>CVV:</label>
+                                <input type="text" placeholder="CVV">
+                            </div>
+                        </div>
+                        <label>Bank:</label>
+                        <select>
+                            <option value="">Select bank</option>
+                        </select>
+                        <button type="submit">Submit Payment</button>
+                   </div>
+                </form>
+            </div>
+            <div class="container__order-info">
+                <h1>Order Information</h1>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer__navbar">
+                <ul class="footer__navbar_item"><h1>LOGO</h1></ul>
+                <ul>
+                    <li class="footer__navbar_item"><h1>© 2024 by Flower Exchange. All Rights Reserved.</h1></li>
+                </ul>
+                <ul>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy tất cả các phần tử `.container__list-item`
+            const listItems = document.querySelectorAll('.container__list-item-2');
+            const object2 = document.querySelector('.Object__2');
+            let isVisible = false; // Trạng thái hiển thị ban đầu của `.Object__2`
+    
+            // Thêm sự kiện click vào từng phần tử `.container__list-item`
+            listItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+    
+                    // Kiểm tra trạng thái hiển thị của `.Object__2`
+                    if (!isVisible) {
+                        object2.style.display = 'block'; // Hiển thị
+                        isVisible = true; // Cập nhật trạng thái
+                    } else {
+                        object2.style.display = 'none'; // Ẩn
+                        isVisible = false; // Cập nhật trạng thái
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

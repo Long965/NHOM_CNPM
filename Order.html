@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Exchange</title>
+    <link rel="stylesheet" href="OrderStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <ul class="header__logo">
+                    <li class="header__navbar_item"><h1>LOGO</h1></li>
+                </ul>
+                <ul class="None__1">
+
+                </ul>
+                <ul class="None__2">
+                    
+                </ul>
+                <ul class="header__menu">
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/HomeAfterToLogin.html#">HOME</a></li>
+                    <li class="header__navbar__list"><a href="#">ABOUT</a></li>
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5500/Shop.html#">ORDER</a></li>
+                    <li class="header__navbar__list"><a href="#">CONTACT</a></li>
+                </ul>
+                <ul class="header__list">
+                    <li class="header__navbar_item header__navbar-user">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            <div class="header__user">
+                                <a class="header__user-item" href="http://127.0.0.1:5501/Profile.html">Profile</a>
+                                <a class="header__user-item" href="#">Counter</a>
+                                <a class="header__user-item" href="http://127.0.0.1:5500/index.html#">Log out</a>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="container__search">
+                <div class="container__search-input">
+                    <input type="text" placeholder="Nhập tên sản phẩm" id="searchInput" onkeyup="searchFlowers()">
+                    <div class="option__1">
+                        <select id="colorFilter" name="options">
+                            <option value="none">Màu sắc</option>
+                            <option value="bright">Tươi sáng</option>
+                            <option value="dark">Màu tối</option>
+                            <option value="multicolor">Nhiều màu</option>
+                            <option value="other">Khác...</option>
+                        </select> 
+                    </div>
+                    <div class="option__2">
+                        <select id="themeFilter" name="options">
+                            <option value="none">Chủ đề</option>
+                            <option value="wedding">Đám cưới</option>
+                            <option value="birthday">Sinh nhật</option>
+                            <option value="opening">Khai trương</option>
+                            <option value="other">Khác...</option>
+                        </select> 
+                    </div>
+                    <div class="container__search-button">
+                        <button onclick="searchFlowers()">Tìm kiếm</button>
+                    </div>
+                </div>
+            </div>
+            <div  class="container__product" >
+                <div class="background__product" id="productList">
+                    <div class="container__col">
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Home/HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Home/HOAHONGHONG.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Hồng</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/CAMTUCAU5LOAI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Cẩm Tú Cầu</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOACUCTANA.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Cúc TANA</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOATULIPTRANG.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Tulip Trắng</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container__col">
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOATULIP.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Tulip</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOAHUONGDUONG.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Hướng Dương</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOAHONGVANG.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Hồng Vàng</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOAHONGTIM.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Hồng Tím</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./Order/HOAHONGDOTRANG.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa Hồng</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container__col">
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                        <div class="container__col-item">
+                            <div class="product__item-img" style="background-image: url('./HOACUCHOAMI.jpg')"></div>
+                            <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                            <div class="product__item-price">
+                                <span class="product__item-price-old">299.000đ</span>
+                                <span class="product__item-price-new">199.000đ</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="btn-add-to-cart">Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <nav class="footer__navbar">
+                <ul class="footer__navbar_item"><h1>LOGO</h1></ul>
+                <ul>
+                    <li class="footer__navbar_item"><h1>© 2024 by Flower Exchange. All Rights Reserved.</h1></li>
+                </ul>
+                <ul>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script>
+            document.querySelector('.container__search-button button').addEventListener('click', () => {
+                const searchValue = document.querySelector('.container__search-input input').value;
+
+                fetch(`https://localhost:5001/api/products?Shop=${encodeURIComponent(searchValue)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Dữ liệu nhận được:', data);
+                        // Xử lý và hiển thị dữ liệu trên trang HTML.
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi gọi API:', error);
+                    });
+            });
+
+        </script>
+        <script src="./Script/SearchFun.js"></script>
+    </div>
+</body>
+</html>

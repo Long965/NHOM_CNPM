@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header{
+    background-color: #084c47;
+    color:#fff;
+    height:200px
+}
+.header__navbar{
+    display: flex;  
+    justify-content: space-between;
+}
+
+.header__logo{
+    font-size:40px;
+    margin:-40px 0;
+}
+
+.header__navbar__list{
+    display: inline-block;
+    margin:140px 15px;
+    align-items:center;
+    font-size:30px
+}
+.header__navbar_item{
+    display: inline-block;
+    margin:40px 10px;
+    align-items:center;
+}
+i{
+    font-size:30px;
+}
+a{
+    color:#fff;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(168, 26, 26, 0.1);
+  }
+  .site-header .logo {
+    display: flex;
+    align-items: center;
+  }
+  .site-header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .site-header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  .main-nav {
+    margin-left: auto;
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  .main-nav ul li a {
+    font-size: 20px;
+    color: #333;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+.wrapper {
+    background-image: url("./login/bg.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Đảm bảo wrapper chiếm toàn bộ chiều cao màn hình */
+}
+
+.form>h1 {
+    margin-bottom: 0px;
+}
+
+#signin {
+    /* max-width: 500px; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(208, 190, 190, 0.7);
+    /* padding: 50px 100px; */
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.input-box {
+    width: 70%;
+    margin-top: 15px;
+    height: 50px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(192, 191, 191);
+    border-radius: 50px;
+    background-color: rgb(240, 231, 231);
+    text-align: center;
+
+}
+
+.wrapper .save-forgot {
+    width: 90%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.save-forgot .save{
+    color: rgb(83, 80, 80);
+}
+.wrapper .butt {
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.wrapper .signup {
+    color: grey;
+    text-align: center;
+}
+
+.input-box>i {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 20;
+}
+
+.icon {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.eye {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.role-selection {
+    width: 70%;
+    height: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.role-selection input {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+.role-selection>label {
+    /* width: 100%; */
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ẩn các nút radio */
+input[type="radio"] {
+    display: none;
+}
+
+.role-label {
+    background-color: #f09c9c;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.role-label:hover {
+    background-color: #d67777;
+}
+
+/* Khi radio button được chọn, thay đổi màu sắc */
+input[type="radio"]:checked+.role-label {
+    background-color: #b83b3b;
+    color: white;
+}
+
+/* Màu sắc cho 'buyer' khi được chọn */
+#buyer:checked+.role-label {
+    background-color: #b87b3b;
+}
+
+.butt {
+    margin: 30px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .form {
+        width: 40% !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .form {
+        width: 70% !important;
+    }
+}
+
+.footer{
+    background-color: #084c47;
+    color:#fff;
+    height:60px;
+    
+}
+.footer__navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer__navbar_item{
+    display: inline-block;
+    margin:20px 10px;
+    align-items:center;
+}
+
+.footer h1{
+    font-size:20px;
+}

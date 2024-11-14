@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Exchange</title>
+    <link rel="stylesheet" href="HomeStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <ul class="header__logo">
+                    <li class="header__navbar_item"><h1>LOGO</h1></li>
+                </ul>
+                <ul class="None__1">
+
+                </ul>
+                <ul class="None__2">
+                    
+                </ul>
+                <ul class="header__menu">
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/Home.html">HOME</a></li>
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/SignIn.html">ABOUT</a></li>
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/SignIn.html">ORDERS</a></li>
+                    <li class="header__navbar__list"><a href="http://127.0.0.1:5501/SignIn.html">CONTACT</a></li>
+                </ul>
+                <ul class="header__list">
+                    <li class="header__navbar_item"><a href="http://127.0.0.1:5501/SignIn.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <section class="container__intro">
+                <nav class="container_navbar">
+                    <div class="container__logo">
+                        <h1>FLOWER-EXCHANGE</h1>
+                        <p>A flower shop that cares all the way</p>
+                    </div>
+                    
+                    <ul class="container__btn">
+                        <button class="sent-flower-btn" onclick="window.location.href='http://127.0.0.1:5501/SignIn.html'">SENT FLOWER</button>
+                    </ul>
+                </nav>
+            </section>
+            <section class="container__wellcome">
+                <h2>WELCOME TO FLOWER-EXCHANGE</h2>
+                <p>We offer beautiful flower delivery in Sai Gon with flexible delivery times</p>
+            </section>
+            <section class="container__infor">
+                <div class="container__delivery-info">
+                    <h3>Flower delivery</h3>
+                    <p>Surprise and spread joy with our flower deliveries in Sai Gon!</p>
+                    <p>We offer beautiful flower delivery in Sai Gon with flexible delivery times, the perfect surprise! Welcome to our world of color and fragrance, where we create magical moments through beautiful flowers. You can also easily order flowers for weddings, funerals and events. We turn ordinary moments into memorable moments.</p>
+                    <p>Why choose our flower delivery services?</p>
+                    <p>We offer outstanding quality and fresh flowers that are hand-picked with care. We have many florists who love flowers and develop together.So why wait? Surprise someone you care about today with one of our flower delivery products. Spread joy and create memorable moments with the help of nature’s beauty. Let us help you make every occasion extra special and unique</p>
+                    <p>So why wait? Surprise someone you care about today with one of our flower delivery products. Spread joy and create memorable moments with the help of nature’s beauty. Let us help you make every occasion extra special and unique.</p>
+                    <p>Order your flowers today and let us take care of the rest!</p>
+                    <button class="send-flowers-btn" onclick="window.location.href='http://127.0.0.1:5501/SignIn.html'">Send Flowers</button>
+                </div>
+                <div class="container__delivery-image">
+                    <img src="./Home/Header1.jpg" alt="Send a flower delivery today!">
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <nav class="footer__navbar">
+                <ul class="footer__navbar_item"><h1>LOGO</h1></ul>
+                <ul>
+                    <li class="footer__navbar_item"><h1>© 2024 by Flower Exchange. All Rights Reserved.</h1></li>
+                </ul>
+                <ul>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('.container__search-button button').addEventListener('click', () => {
+            const searchValue = document.querySelector('.container__search-input input').value;
+
+            fetch(`https://localhost:5001/api/products?Shop=${encodeURIComponent(searchValue)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Dữ liệu nhận được:', data);
+                    // Xử lý và hiển thị dữ liệu trên trang HTML.
+                })
+                .catch(error => {
+                    console.error('Lỗi khi gọi API:', error);
+                });
+        });
+
+    </script>
+</body>
+</html>

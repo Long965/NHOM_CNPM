@@ -15,11 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventFlowerExchange.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c6c75d35af5d8a1e2af60cb4941e6d3c5cc700f")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58945280f805cc7052d2026f8692bac5f39d214b")]
->>>>>>> 568ba2feae52bf104ba53371718a67e457c4bfaf
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce335a67d249254c35ff1ab13391546180da3847")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventFlowerExchange.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventFlowerExchange.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

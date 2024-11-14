@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventFlowerExchange.WebApp
 build_property.RootNamespace = EventFlowerExchange.WebApp
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp\
-=======
-build_property.ProjectDir = C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.webapp\
->>>>>>> 568ba2feae52bf104ba53371718a67e457c4bfaf
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\PHILONG\Documents\Tài liệu project\Project\EventFlowerExchange.webapp
-=======
-build_property.MSBuildProjectDirectory = C:\Users\PHILONG\Documents\Tài liệu project\Source code\EventFlowerExchange.webapp
->>>>>>> 568ba2feae52bf104ba53371718a67e457c4bfaf
 build_property._RazorSourceGeneratorDebug = 

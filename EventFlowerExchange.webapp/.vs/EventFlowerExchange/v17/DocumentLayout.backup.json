@@ -6,12 +6,15 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02BD0AD4-EED9-4865-94EF-4A46B949E669}|..\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.repositories\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.webapp\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|solutionrelative:controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A07C54D1-ACBC-42DE-83DA-8E87D6F0A472}|EventFlowerExchange.WebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE1449BA-A7B7-4998-B85C-6695F4D0A52E}|..\\EventFlowerExchange.service\\EventFlowerExchange.services.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.service\\services\\userprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -69,9 +72,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{02BD0AD4-EED9-4865-94EF-4A46B949E669}|..\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.repositories\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02BD0AD4-EED9-4865-94EF-4A46B949E669}|..\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.repositories\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02BD0AD4-EED9-4865-94EF-4A46B949E669}|..\\EventFlowerExchange.Repositories\\EventFlowerExchange.Repositories.csproj|c:\\users\\philong\\documents\\t\u00E0i li\u1EC7u project\\project\\eventflowerexchange.repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -190,9 +190,9 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAMwVAAAAAAAAAAAIwN4VAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAOQVAAAAAAAAAAAIwN4VAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-11-14T04:01:20.891Z",
+              "WhenOpened": "2024-11-14T04:09:45.954Z",
               "EditorCaption": ""
             },
             {
@@ -203,25 +203,14 @@
               "RelativeDocumentMoniker": "Controllers\\UserProfileController.cs",
               "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\UserProfileController.cs",
               "RelativeToolTip": "Controllers\\UserProfileController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T15:21:40.861Z"
+              "WhenOpened": "2024-11-13T15:21:40.861Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserProfileService.cs",
-              "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
-              "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
-              "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
-              "RelativeToolTip": "..\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T15:20:44.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IUserProfileService.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\Interfaces\\IUserProfileService.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\Interfaces\\IUserProfileService.cs",
@@ -233,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Repositories\\UserProfileRepository.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Repositories\\UserProfileRepository.cs",
@@ -245,20 +234,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAowGIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T11:45:21.609Z",
+              "WhenOpened": "2024-10-25T11:45:21.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "..\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T12:41:57.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "UserProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
+              "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
+              "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
+              "RelativeToolTip": "..\\EventFlowerExchange.service\\Services\\UserProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:20:44.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IUserProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Interfaces\\IUserProfileRepository.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Interfaces\\IUserProfileRepository.cs",
@@ -270,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "IPaymentRepository.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Interfaces\\IPaymentRepository.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Interfaces\\IPaymentRepository.cs",
@@ -282,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -294,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FlowerController.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\FlowerController.cs",
               "RelativeDocumentMoniker": "Controllers\\FlowerController.cs",
@@ -306,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -318,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
@@ -330,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -342,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Interfaces\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Interfaces\\IOrderRepository.cs",
@@ -354,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "EventFlowerExchangeContext.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Entities\\EventFlowerExchangeContext.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Entities\\EventFlowerExchangeContext.cs",
@@ -366,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.webapp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -390,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ChangePasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\DTO\\ChangePasswordDto.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\DTO\\ChangePasswordDto.cs",
@@ -402,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\DTO\\LoginDto.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\DTO\\LoginDto.cs",
@@ -414,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.service\\DTO\\UserDto.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.service\\DTO\\UserDto.cs",
@@ -427,18 +440,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "..\\EventFlowerExchange.Repositories\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T12:41:57.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\PHILONG\\Documents\\T\u00E0i li\u1EC7u project\\Project\\EventFlowerExchange.Repositories\\Entities\\User.cs",
               "RelativeDocumentMoniker": "..\\EventFlowerExchange.Repositories\\Entities\\User.cs",

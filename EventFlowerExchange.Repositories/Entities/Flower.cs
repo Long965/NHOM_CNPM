@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace EventFlowerExchange.Repositories.Entities;
 
@@ -28,6 +29,6 @@ public partial class Flower
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
-
+    [JsonIgnore]
     public virtual User? Seller { get; set; }
 }

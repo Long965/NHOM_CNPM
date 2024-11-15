@@ -35,6 +35,8 @@ public partial class EventFlowerExchangeContext : DbContext
 
     public virtual DbSet<Review> Reviews { get; set; }
 
+    public virtual DbSet<Token> Tokens { get; set; }
+
     public virtual DbSet<TransactionHistory> TransactionHistories { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -42,10 +44,6 @@ public partial class EventFlowerExchangeContext : DbContext
     public virtual DbSet<UserProfile> UserProfiles { get; set; }
 
     public virtual DbSet<UserRole> UserRoles { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=LAPTOP-G2FAT0GI\\SQLEXPRESS;Database=EventFlowerExchange;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -203,6 +201,25 @@ public partial class EventFlowerExchangeContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK__Reviews__UserId__68487DD7");
+        });
+
+        modelBuilder.Entity<Token>(entity =>
+        {
+            entity.HasKey(e => e.TokenId).HasName("PK__Tokens__658FEE8AA5E8FE71");
+
+            entity.Property(e => e.TokenId).HasColumnName("TokenID");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.ExpiresAt).HasColumnType("datetime");
+            entity.Property(e => e.Token1)
+                .HasMaxLength(500)
+                .HasColumnName("Token");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Tokens)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Tokens__UserId__0C85DE4D");
         });
 
         modelBuilder.Entity<TransactionHistory>(entity =>

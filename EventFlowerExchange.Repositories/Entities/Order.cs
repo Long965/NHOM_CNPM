@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace EventFlowerExchange.Repositories.Entities;
 
@@ -21,13 +22,16 @@ public partial class Order
 
     public decimal? TotalPrice { get; set; }
 
+    [JsonIgnore]
     public virtual User? Buyer { get; set; }
 
+    [JsonIgnore]
     public virtual Flower? Flower { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
+    [JsonIgnore]
     public virtual User? Seller { get; set; }
 }

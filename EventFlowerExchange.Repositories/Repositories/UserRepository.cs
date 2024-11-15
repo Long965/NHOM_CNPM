@@ -40,5 +40,4 @@ namespace EventFlowerExchange.Repositories.Repositories
             await _context.SaveChangesAsync();
         }
     }
-
 }

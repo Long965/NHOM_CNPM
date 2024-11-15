@@ -29,6 +29,8 @@ public partial class User
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
+    public virtual ICollection<Token> Tokens { get; set; } = new List<Token>();
+
     public virtual ICollection<UserProfile> UserProfiles { get; set; } = new List<UserProfile>();
 
     public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();

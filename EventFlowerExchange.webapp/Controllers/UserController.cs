@@ -44,6 +44,10 @@ namespace EventFlowerExchange.WebApp.Controllers
             try
             {
                 var token = await _userService.LoginAsync(loginDto);
+                if (string.IsNullOrEmpty(token))
+                {
+                    throw new Exception("Token generation failed.");
+                }
                 return Ok(new
                 {
                     message = "Login successfully",
@@ -59,5 +63,30 @@ namespace EventFlowerExchange.WebApp.Controllers
                 return StatusCode(500, new { message = "An error occurred during login.", error = ex.Message });
             }
         }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout([FromHeader(Name = "Authorization")] string token)
+        {
+            if (string.IsNullOrEmpty(token))
+            {
+                return BadRequest(new { message = "Token is required." });
+            }
+
+            token = token.StartsWith("Bearer ") ? token.Substring(7) : token;
+
+            try
+            {
+                Console.WriteLine($"Received token: {token}");
+                await _userService.InvalidateTokenAsync(token);
+                return Ok(new { message = "Logged out successfully." });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during logout: {ex}");
+                return StatusCode(500, new { message = "An error occurred during logout.", error = ex.Message });
+            }
+        }
+
+
     }
 }

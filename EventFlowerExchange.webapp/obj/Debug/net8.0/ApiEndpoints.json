@@ -191,6 +191,22 @@
   },
   {
     "ContainingType": "EventFlowerExchange.WebApp.Controllers.UserController",
+    "Method": "Logout",
+    "RelativePath": "api/User/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Authorization",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventFlowerExchange.WebApp.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
@@ -200,6 +216,59 @@
       {
         "Name": "userDto",
         "Type": "EventFlowerExchange.services.DTO.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventFlowerExchange.WebApp.Controllers.UserProfileController",
+    "Method": "GetUserProfile",
+    "RelativePath": "api/UserProfile/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventFlowerExchange.WebApp.Controllers.UserProfileController",
+    "Method": "UpdateUserProfile",
+    "RelativePath": "api/UserProfile/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userProfile",
+        "Type": "EventFlowerExchange.Repositories.Entities.UserProfile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventFlowerExchange.WebApp.Controllers.UserProfileController",
+    "Method": "DeleteUserProfile",
+    "RelativePath": "api/UserProfile/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

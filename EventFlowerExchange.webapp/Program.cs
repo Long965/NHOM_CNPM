@@ -29,15 +29,14 @@ namespace EventFlowerExchange
             // Configure Dependency Injection for Services and Repositories
             builder.Services.AddScoped<IFlowerService, FlowerService>();
             builder.Services.AddScoped<IFlowerRepository, FlowerRepository>();
+            builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IUserProfileService, UserProfileService>();
             builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
-
-            builder.Services.AddScoped<IOrderService, OrderService>();
-            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
 
             // Configure JSON Options
@@ -98,7 +97,6 @@ namespace EventFlowerExchange
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]))
                 };
-
 
                 options.Events = new JwtBearerEvents
                 {

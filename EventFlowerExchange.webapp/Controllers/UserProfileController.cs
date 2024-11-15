@@ -31,15 +31,32 @@ namespace EventFlowerExchange.WebApp.Controllers
         [HttpPut("{userId}")]
         public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfile userProfile)
         {
-            if (userProfile == null || userProfile.UserId != userId)
+            // Kiểm tra nếu dữ liệu userProfile không hợp lệ
+            if (userProfile == null)
             {
-                return BadRequest(new { message = "Invalid profile data or user ID mismatch." });
+                return BadRequest(new { message = "Profile data is missing." });
             }
 
-            await _userProfileService.UpdateUserProfileAsync(userProfile);
-            return Ok(new { message = "User profile updated successfully." });
-        }
+            // Kiểm tra sự khớp giữa userId trong URL và userId trong đối tượng userProfile
+            if (userProfile.UserId != userId)
+            {
+                return BadRequest(new { message = "User ID mismatch." });
+            }
 
+            try
+            {
+                // Gọi service để cập nhật hồ sơ người dùng
+                await _userProfileService.UpdateUserProfileAsync(userProfile);
+
+                // Trả về thông báo thành công
+                return Ok(new { message = "User profile updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                // Trường hợp có lỗi xảy ra trong quá trình cập nhật
+                return StatusCode(500, new { message = $"An error occurred while updating the profile: {ex.Message}" });
+            }
+        }
         // Xóa hồ sơ người dùng
         [HttpDelete("{userId}")]
         public async Task<IActionResult> DeleteUserProfile(int userId)

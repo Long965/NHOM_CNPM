@@ -13,5 +13,6 @@ namespace EventFlowerExchange.Repositories.Interfaces
         Task<string> LoginAsync(LoginDto loginDto);
         Task<UserDto> GetUserByIdAsync(int userId);
         Task ChangePasswordAsync(int userId, ChangePasswordDto changePasswordDto);
+        Task InvalidateTokenAsync(string token);
     }
 }

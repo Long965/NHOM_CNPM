@@ -1,6 +1,8 @@
 ﻿using EventFlowerExchange.Repositories.Entities;
 using EventFlowerExchange.Repositories.Interfaces;
+using EventFlowerExchange.Repositories.Repositories;
 using EventFlowerExchange.services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,31 @@ namespace EventFlowerExchange.services.Services
 
         public async Task UpdateUserProfileAsync(UserProfile userProfile)
         {
+            if (userProfile == null)
+                throw new ArgumentNullException(nameof(userProfile));
+
+            try
+            {
+                var existingUserProfile = await _userProfileRepository.GetByUserIdAsync(userProfile.UserId);
+
+                if (existingUserProfile == null)
+                {
+                    throw new Exception("User profile not found");
+                }
+
+                // Cập nhật các trường thông tin hồ sơ người dùng
+                existingUserProfile.PhoneNumber = userProfile.PhoneNumber;
+                existingUserProfile.Gender = userProfile.Gender;
+                existingUserProfile.DateOfBirth = userProfile.DateOfBirth;
+                existingUserProfile.Address = userProfile.Address;
+
+                // Cập nhật đối tượng người dùng trong DbContext
+                await _userProfileRepository.UpdateAsync(existingUserProfile);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error in UserFrofileService while updating Profile", ex);
+            }
             await _userProfileRepository.UpdateAsync(userProfile);
         }
 

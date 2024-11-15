@@ -1,5 +1,6 @@
 ﻿using EventFlowerExchange.Repositories.Entities;
 using EventFlowerExchange.Repositories.Interfaces;
+using EventFlowerExchange.Repositories.Repositories;
 using EventFlowerExchange.services.DTO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -15,11 +16,13 @@ namespace EventFlowerExchange.services.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly ITokenRepository _tokenRepository;
 
-        public UserService(IUserRepository userRepository, IConfiguration configuration)
+        public UserService(IUserRepository userRepository, IConfiguration configuration, ITokenRepository tokenRepository)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _tokenRepository = tokenRepository;
         }
 
         // Đăng ký người dùng
@@ -48,14 +51,52 @@ namespace EventFlowerExchange.services.Services
         // Đăng nhập người dùng
         public async Task<string> LoginAsync(LoginDto loginDto)
         {
-            var user = await _userRepository.GetUserByEmailAsync(loginDto.Email);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
+            if (loginDto == null)
             {
-                throw new Exception("Invalid email or password.");
+                Console.WriteLine("Login data is null.");
+                throw new ArgumentNullException(nameof(loginDto), "Login data cannot be null.");
             }
 
-            return GenerateJwtToken(user);
+            Console.WriteLine("Fetching user by email...");
+            var user = await _userRepository.GetUserByEmailAsync(loginDto.Email);
+            if (user == null)
+            {
+                Console.WriteLine("User not found.");
+                throw new UnauthorizedAccessException("Invalid email or password.");
+            }
+
+            Console.WriteLine("Verifying password...");
+            if (!BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
+            {
+                Console.WriteLine("Password verification failed.");
+                throw new UnauthorizedAccessException("Invalid email or password.");
+            }
+
+            Console.WriteLine("Generating token...");
+            var token = GenerateJwtToken(user);
+            if (string.IsNullOrEmpty(token))
+            {
+                Console.WriteLine("Token generation failed.");
+                throw new Exception("Token generation failed.");
+            }
+
+            Console.WriteLine("Saving token to database...");
+            var tokenEntity = new Token
+            {
+                UserId = user.Id,
+                Token1 = token,
+                CreatedAt = DateTime.UtcNow,
+                ExpiresAt = DateTime.UtcNow.AddHours(1),
+                IsRevoked = false
+            };
+
+            await _tokenRepository.AddTokenAsync(tokenEntity);
+            Console.WriteLine("Token saved successfully.");
+
+            return token;
         }
+
+
 
         public async Task<UserDto> GetUserByIdAsync(int userId)
         {
@@ -92,6 +133,23 @@ namespace EventFlowerExchange.services.Services
             // Mã hóa mật khẩu mới và cập nhật
             user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(changePasswordDto.NewPassword);
             await _userRepository.UpdateUserAsync(user);
+        }
+
+        public async Task InvalidateTokenAsync(string tokenValue)
+        {
+            var existingToken = await _tokenRepository.GetTokenByValueAsync(tokenValue);
+            if (existingToken == null)
+            {
+                throw new ArgumentException("Token not found.");
+            }
+
+            if (existingToken.IsRevoked)
+            {
+                throw new InvalidOperationException("Token is already revoked.");
+            }
+
+            existingToken.IsRevoked = true;
+            await _tokenRepository.UpdateTokenAsync(existingToken);
         }
 
         // Tạo JWT

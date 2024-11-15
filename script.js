@@ -28,7 +28,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
         document.getElementById('loginMessage').innerText = 'Đăng nhập thành công!';
         
         // Chuyển hướng tới trang chủ
-        window.location.href = 'http://127.0.0.1:5501/HomeAfterToLogin.html'; // Thay 'TrangChu.html' bằng đường dẫn đến trang chủ của bạn.
+        window.location.href = 'HomeAfterToLogin.html'; // Thay 'TrangChu.html' bằng đường dẫn đến trang chủ của bạn.
     } else {
         document.getElementById('loginMessage').innerText = 'Đăng nhập thất bại: ' + data.message;
     }

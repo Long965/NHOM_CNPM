@@ -51,8 +51,9 @@ document.getElementById('signin').addEventListener('submit', async (e) => {
     }
 });
 
- // JavaScript để điều khiển việc hiển thị các phần
- function showSection(sectionId, element) {
+
+// JavaScript để điều khiển việc hiển thị các phần
+function showSection(sectionId, element) {
     // Ẩn tất cả các phần
     var sections = document.getElementsByClassName('section');
     for (var i = 0; i < sections.length; i++) {

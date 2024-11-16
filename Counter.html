@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Exchange</title>
+    <link rel="stylesheet" href="CounterStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <ul class="header__logo">
+                    <li class="header__navbar_item"><h1>Flower Exchange</h1></li>
+                </ul>
+                <ul class="None__1">
+
+                </ul>
+                <ul class="None__2">
+                    
+                </ul>
+                <ul class="header__menu">
+                    <li class="header__navbar__list"><a href="HomeAfterToLogin.html">HOME</a></li>
+                    <li class="header__navbar__list"><a href="#">ABOUT</a></li>
+                    <li class="header__navbar__list"><a href="Order.html">ORDER</a></li>
+                    <li class="header__navbar__list"><a href="#">CONTACT</a></li>
+                </ul>
+                <ul class="header__list">
+                    <li class="header__navbar_item header__navbar-user">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            <div class="header__user">
+                                <a class="header__user-item" href="Profile.html">Profile</a>
+                                <a class="header__user-item" href="Cart.html">Cart</a>
+                                <a class="header__user-item" href="SignIn.html">Log out</a>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+           <div class="container__Khuvucthanhtoan">
+                <div class="container__methods">
+                    <h1>PAYMENT METHODS</h1>
+                    <div class="container__list-pos">
+                        <li class="container__list-item" onclick="showPaymentForm('credit-card')">Payment for Card</li>
+                        <li class="container__list-item" onclick="showPaymentForm('Momo')">Momo</li>
+                    </div>
+                </div>
+                <div class="container__payment-form" id="payment-form">
+                    <form class="payment-form">
+                        <div class="container__cart-img">
+                            <img src="./Cart/logo3.png" alt="PT1">
+                        </div>
+                        <label>Số thẻ:</label>
+                        <input type="text" placeholder="Nhập số thẻ tín dụng (16 chữ số)">
+                        <div class="form-row">
+                            <div>
+                                <label>Ngày hết hạn:</label>
+                                <input type="text" placeholder="MM/YY">
+                            </div>
+                            <div>
+                                <label>CVV:</label>
+                                <input type="text" placeholder="CVV">
+                            </div>
+                        </div>
+                        <label>Ngân hàng:</label>
+                        <select>
+                            <option value="">Chọn ngân hàng</option>
+                        </select>
+                        <button type="submit">Gửi thanh toán</button>
+                    </form>
+                </div>
+                <div class="container__payment-QR" id="paypal-form">
+                    <form>
+                        <h1>QUÉT MÃ THANH TOÁN</h1>
+                        <div class="payment__QR">
+                            <img src="./Cart/QR.jpg" alt="Đang tạo mã QR">
+                        </div>
+                    </form>
+                </div>
+                <!-- Form chuyển khoản ngân hàng -->
+                <div class="container__payment-bank-transfer" id="bank-transfer-form">
+                    <h1>Thanh toán chuyển khoản ngân hàng</h1>
+                    <!-- Thêm các trường thông tin chuyển khoản ngân hàng ở đây -->
+                </div>
+                <div class="container__order-info">
+                    <h1>Thông tin đơn hàng</h1>
+                </div>
+           </div>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer__navbar">
+                <ul class="footer__navbar_item"><h1>LOGO</h1></ul>
+                <ul>
+                    <li class="footer__navbar_item"><h1>© 2024 by Flower Exchange. All Rights Reserved.</h1></li>
+                </ul>
+                <ul>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="footer__navbar_item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        function showPaymentForm(method) {
+            // Ẩn tất cả các form
+            document.getElementById('payment-form').style.display = 'none';
+            document.getElementById('paypal-form').style.display = 'none';
+            document.getElementById('bank-transfer-form').style.display = 'none';
+
+            // Hiển thị form đã chọn
+            if (method === 'credit-card') {
+                document.getElementById('payment-form').style.display = 'block';
+            } else if (method === 'Momo') {
+                document.getElementById('paypal-form').style.display = 'block';
+            } else if (method === 'bank-transfer') {
+                document.getElementById('bank-transfer-form').style.display = 'block';
+            }
+        }
+    </script>
+    
+</body>
+</html>

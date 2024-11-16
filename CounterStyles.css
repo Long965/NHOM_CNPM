@@ -84,9 +84,13 @@ div.header__user::before{
 }
 
 .container {
+    height:500px;
+}
+.container__Khuvucthanhtoan{
     display: flex;
     gap: 20px;
     padding: 20px;
+    
 }
 
 .container__methods{
@@ -96,6 +100,7 @@ div.header__user::before{
     flex: 1;
 }
 .container__payment-form{
+    display:none;
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
@@ -110,7 +115,7 @@ div.header__user::before{
 }
 
 .container__methods h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -121,9 +126,14 @@ div.header__user::before{
 .container__list-item {
     color: green;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-
+.container__list-pos{
+    margin-top:180px;
+}
+.container__cart-img img{
+    width:100%;
+}
 .payment-form label {
     display: block;
     margin-top: 10px;
@@ -157,32 +167,22 @@ div.header__user::before{
     font-size: 18px;
 }
 
-.Object__2{
-    position: absolute;
-    background-color: #fff;
-    width: 948px;
-    height: 580px;
-    left: 282px;
-    top: 321px;
-    border: 1px solid #ccc;
+.container__payment-QR{
     display:none;
-}
+    border: 1px solid #ccc;
 
+}
 .payment__QR{
-    background-color:red;
-    width:100px;
-    position:absolute;
-    left:100px;
-    right:100px;
+    display: flex;
+    justify-content:center; /* Căn chỉnh ảnh sang trái */
 }
-
-.payment__QR img {
-    width:500px;
-    height:500px;
+.container__payment-QR img{
+    width:55%;
+    height:auto;
+    
 }
-
-.container__list-item:active .Object__2 {
-    display: block; /* Hiện khi hover */
+.container__payment-bank-transfer{
+    display:none;
 }
 
 /*footer*/

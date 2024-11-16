@@ -1,0 +1,57 @@
+/* Hiệu ứng khi hover lên nút */
+.sent-flower-btn, .send-flowers-btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sent-flower-btn:hover, .send-flowers-btn:hover {
+    transform: scale(1.1); /* Phóng to nút */
+    background-color: #ff7f50; /* Thay đổi màu nền */
+}
+
+/* Đặt mặc định các phần tử ở trạng thái ẩn */
+.container__intro, .container__wellcome, .container__infor {
+    opacity: 0;
+    transform: translateY(20px); /* Di chuyển nhẹ phần tử xuống dưới */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Khi trang đã tải, các phần tử sẽ xuất hiện */
+.container__intro.visible, .container__wellcome.visible, .container__infor.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hiệu ứng pulse khi hover lên nút */
+.sent-flower-btn:hover, .send-flowers-btn:hover {
+    animation: pulse 1s infinite;
+}
+
+/* Định nghĩa animation pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Đặt các phần tử sản phẩm ở trạng thái ẩn ban đầu */
+.container__col-item {
+    opacity: 0;
+    transform: translateY(30px); /* Di chuyển phần tử xuống dưới */
+    transition: opacity 1s ease, transform 1s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Khi phần tử vào vùng nhìn thấy (được thêm class 'visible') */
+.container__col-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Đưa phần tử về vị trí ban đầu */
+}

@@ -76,30 +76,20 @@ div.header__user::before{
 /*Container*/
 .container{
     background-color: #EFE3D8;
+    height:500px;
+    padding:60px 10px;
 }
-.container__main{
-    width:80%;
-    margin:0 auto;
-    background:rgb(57, 57, 57);
+.contaiter__main{
+   background-color: #ffffff;
+   width:30%;
+   margin: 0 auto;
+   padding:10px 10px;
 }
-.container__product{
-    width:100px;
+.container__info{
+    border: 1px solid rgb(0, 0, 0);
+    color:aqua;
 }
-.container__col-item{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 10px; /* Bo tròn góc */
-    display: flex;
-    justify-content: space-between;
-}
-.product__item-img{
-    padding-top:100%;
-    border-radius: 10px; /* Bo tròn góc */
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center;
-}
+
 /*Footer*/
 .footer{
     background-color: #084c47;

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Exchange</title>
     <link rel="stylesheet" href="CartStyles.css">
-    <link rel="stylesheet" href="./Animation/AnimationStyles.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -35,7 +33,7 @@
                             <i class="fa-regular fa-user"></i>
                             <div class="header__user">
                                 <a class="header__user-item" href="Profile.html">Profile</a>
-                                <a class="header__user-item" href="Cart.html">Cart</a>
+                                <a class="header__user-item" href="Cart.html">Cart      </a>
                                 <a class="header__user-item" href="SignIn.html">Log out</a>
                             </div>
                         </a>
@@ -46,11 +44,46 @@
         <div class="container">
             <div class="contaiter__main">
                 <div class="container__info">
-                    <h1>ĐỊA CHỈ NHẬN HÀNG</h1>
-                    
+                    <h2>Địa chỉ nhận hàng</h2>
+                    <div class="container__info-address">
+                        <div class="address__name">Nhật Hào</div>
+                        <div class="address__dc">125/9/6, An Phú Đông 09, APĐ, Quận 12</div>
+                        <div class="address__phone">0888553944</div>
+                        <button class="address_btn">Thay đổi</button>
+                    </div>
                 </div>
                 <div class="container__product">
-
+                    <h2>Sản phẩm trong giỏ hàng</h2>
+                    </div><div class="background__product" id="productList">
+                        <div class="container__col">
+                            <div class="container__col-item">
+                                <div class="product__item-img" style="background-image: url('./Home/HOACUCHOAMI.jpg')"></div>
+                                <div>
+                                    <div class="product__item-name"><h6>Hoa cúc họa mi</h6></div>
+                                    <div class="product__item-price">199.000đ</div>
+                                    <div><input type="number" class="product__item-number" placeholder="..." id="product-quantity"></div>
+                                    <div class=""><button class="product__item-btn" onclick="addToCart('Hoa Cúc Họa Mi', 199000)">Add to Cart</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container__col">
+                            <div class="container__col-item">
+                                <div class="product__item-img" style="background-image: url('./Home/HOAHONGHONG.jpg')"></div>
+                                <div>
+                                    <div class="product__item-name"><h6>Hoa Hồng Hồng</h6></div>
+                                    <div class="product__item-price">199.000đ</div>
+                                    <div><input type="number" class="product__item-number" placeholder="..." id="product1-quantity"></div>
+                                    <div class=""><button class="product__item-btn" onclick="addToCart('Hoa Hồng Hồng', 199000)">Add to Cart</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__cart">
+                        <h2>Giỏ hàng</h2>
+                        <div id="cart"></div>
+                        <p id="total">Tổng: 0đ</p>
+                        <button onclick="checkout()">Thanh toán</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,23 +100,6 @@
             </nav>
         </footer>
     </div>
-    
-    <script>
-        document.querySelector('.container__search-button button').addEventListener('click', () => {
-            const searchValue = document.querySelector('.container__search-input input').value;
-
-            fetch(`https://localhost:5001/api/products?Shop=${encodeURIComponent(searchValue)}`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Dữ liệu nhận được:', data);
-                    // Xử lý và hiển thị dữ liệu trên trang HTML.
-                })
-                .catch(error => {
-                    console.error('Lỗi khi gọi API:', error);
-                });
-        });
-
-    </script>
-    <script src="./Animation/Animation.js"></script>
+    <script src="./Script/cart.js" ></script>
 </body>
 </html>

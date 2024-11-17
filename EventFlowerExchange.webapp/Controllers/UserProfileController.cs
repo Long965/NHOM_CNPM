@@ -1,6 +1,8 @@
 ﻿using EventFlowerExchange.Repositories.Entities;
 using EventFlowerExchange.services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace EventFlowerExchange.WebApp.Controllers
 {
@@ -28,20 +30,26 @@ namespace EventFlowerExchange.WebApp.Controllers
         }
 
         // Cập nhật hồ sơ người dùng
-        [HttpPut("{userId}")]
-        public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfile userProfile)
+        [HttpPut("update-profile")]
+        [Authorize] // Đảm bảo người dùng đã đăng nhập
+        public async Task<IActionResult> UpdateUserProfile([FromBody] UserProfile userProfile)
         {
+            // Lấy userId từ JWT Token
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            {
+                return Unauthorized(new { message = "User ID not found in token." });
+            }
+
             // Kiểm tra nếu dữ liệu userProfile không hợp lệ
             if (userProfile == null)
             {
                 return BadRequest(new { message = "Profile data is missing." });
             }
 
-            // Kiểm tra sự khớp giữa userId trong URL và userId trong đối tượng userProfile
-            if (userProfile.UserId != userId)
-            {
-                return BadRequest(new { message = "User ID mismatch." });
-            }
+            // Gắn `userId` vào đối tượng `userProfile`
+            userProfile.UserId = userId;
 
             try
             {
@@ -57,6 +65,45 @@ namespace EventFlowerExchange.WebApp.Controllers
                 return StatusCode(500, new { message = $"An error occurred while updating the profile: {ex.Message}" });
             }
         }
+
+        [HttpPost("createUserProfile")]
+        [Authorize] // Chỉ người dùng đã đăng nhập mới được phép truy cập
+        public async Task<IActionResult> CreateUserProfile([FromBody] UserProfile userProfile)
+        {
+            try
+            {
+                // Lấy UserId từ JWT Token
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (string.IsNullOrEmpty(userIdClaim))
+                {
+                    return Unauthorized(new { message = "User ID not found in token." });
+                }
+
+                // Chuyển đổi UserId từ string sang int
+                var userId = int.Parse(userIdClaim);
+
+                // Gán UserId từ JWT vào đối tượng userProfile
+                userProfile.UserId = userId;
+
+                // Kiểm tra nếu hồ sơ đã tồn tại
+                var existingProfile = await _userProfileService.GetUserProfileByUserIdAsync(userId);
+                if (existingProfile != null)
+                {
+                    return BadRequest(new { message = "User profile already exists." });
+                }
+
+                // Gọi service để lưu hồ sơ
+                await _userProfileService.CreateUserProfileAsync(userProfile);
+
+                return Ok(new { message = "User profile created successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred while creating the profile: {ex.Message}" });
+            }
+        }
+
         // Xóa hồ sơ người dùng
         [HttpDelete("{userId}")]
         public async Task<IActionResult> DeleteUserProfile(int userId)

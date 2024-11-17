@@ -129,18 +129,17 @@ namespace EventFlowerExchange
             // Configure CORS
             builder.Services.AddCors(options =>
             {
-                options.AddDefaultPolicy(policy =>
-                {
-                    policy.AllowAnyOrigin() // You can replace AllowAnyOrigin with .WithOrigins("https://your-frontend-url") for specific origins
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
-                });
+                options.AddPolicy("AllowAll",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
             });
 
             var app = builder.Build();
 
             // Use CORS Middleware
-            app.UseCors();
+            app.UseCors("AllowAll");
 
 
             // Configure the HTTP request pipeline.
@@ -153,6 +152,8 @@ namespace EventFlowerExchange
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
+
+            app.UseRouting();
 
             app.UseAuthorization();
 

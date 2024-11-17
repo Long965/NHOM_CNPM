@@ -14,6 +14,9 @@ namespace EventFlowerExchange.Repositories.Interfaces
         Task AddFlowerAsync(Flower flower);
         Task UpdateFlowerAsync(Flower flower);
         Task DeleteFlowerAsync(int id);
+        Task<Flower> GetFlowersByQuantity(int quantity);
+        Task<Flower> GetFlowersByPriceAsync(decimal price);
+        Task<FlowerImage> GetImageUrl(string image);
     }
 
 }

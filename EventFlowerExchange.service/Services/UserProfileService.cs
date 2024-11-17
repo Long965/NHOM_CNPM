@@ -59,6 +59,25 @@ namespace EventFlowerExchange.services.Services
         {
             await _userProfileRepository.DeleteByUserIdAsync(userId);
         }
+
+        public async Task CreateUserProfileAsync(UserProfile userProfile)
+        {
+            if (userProfile == null)
+            {
+                throw new ArgumentNullException(nameof(userProfile), "User profile cannot be null.");
+            }
+
+            // Kiểm tra xem hồ sơ đã tồn tại hay chưa
+            var existingProfile = await _userProfileRepository.GetByUserIdAsync(userProfile.UserId);
+            if (existingProfile != null)
+            {
+                throw new InvalidOperationException("User profile already exists.");
+            }
+
+            // Lưu hồ sơ mới
+            await _userProfileRepository.AddUserProfileAsync(userProfile);
+        }
+
     }
 
 }

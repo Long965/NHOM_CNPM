@@ -11,7 +11,6 @@ namespace EventFlowerExchange.services.Services
     public class FlowerService : IFlowerService
     {
         private readonly IFlowerRepository _flowerRepository;
-
         public FlowerService(IFlowerRepository flowerRepository)
         {
             _flowerRepository = flowerRepository ?? throw new ArgumentNullException(nameof(flowerRepository));
@@ -102,5 +101,52 @@ namespace EventFlowerExchange.services.Services
             }
         }
 
+        public async Task<Flower> GetFlowersByQuantity(int quantity)
+        {
+            try
+            {
+                return await _flowerRepository.GetFlowersByQuantity(quantity);
+            }
+            catch (KeyNotFoundException knfEx)
+            {
+                throw new KeyNotFoundException(knfEx.Message, knfEx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error in FlowerService while retrieving flower by Quantity", ex);
+            }
+        }
+
+        public async Task<Flower> GetFlowersByPriceAsync(decimal Price)
+        {
+            try
+            {
+                return await _flowerRepository.GetFlowersByPriceAsync(Price);
+            }
+            catch (KeyNotFoundException knfEx)
+            {
+                throw new KeyNotFoundException(knfEx.Message, knfEx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error in FlowerService while retrieving flower by Price", ex);
+            }
+        }
+
+        public async Task<FlowerImage> GetImageUrl(string image)
+        {
+            try
+            {
+                return await _flowerRepository.GetImageUrl(image);
+            }
+            catch (KeyNotFoundException knfEx)
+            {
+                throw new KeyNotFoundException(knfEx.Message, knfEx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error in FlowerService while retrieving flower by ID", ex);
+            }
+        }
     }
 }

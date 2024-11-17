@@ -1,8 +1,0 @@
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\bin\Debug\net8.0\.msCoverageSourceRootsMapping_AutomationTest_Selenium
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\bin\Debug\net8.0\CoverletSourceRootsMapping_AutomationTest_Selenium
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.csproj.AssemblyReference.cache
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.AssemblyInfoInputs.cache
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.AssemblyInfo.cs
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.csproj.CoreCompileInputs.cache
-C:\Users\PHILONG\Documents\Tài liệu project\Project\AutomationTest_Selenium\obj\Debug\net8.0\AutomationTest_Selenium.sourcelink.json

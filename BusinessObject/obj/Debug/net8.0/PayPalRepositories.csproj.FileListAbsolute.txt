@@ -1,0 +1,14 @@
+C:\Paypal (1)\BusinessObject\bin\Debug\net8.0\PayPalRepositories.deps.json
+C:\Paypal (1)\BusinessObject\bin\Debug\net8.0\PayPalRepositories.runtimeconfig.json
+C:\Paypal (1)\BusinessObject\bin\Debug\net8.0\PayPalRepositories.dll
+C:\Paypal (1)\BusinessObject\bin\Debug\net8.0\PayPalRepositories.pdb
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.csproj.AssemblyReference.cache
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.AssemblyInfoInputs.cache
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.AssemblyInfo.cs
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.csproj.CoreCompileInputs.cache
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.dll
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\refint\PayPalRepositories.dll
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.pdb
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\PayPalRepositories.genruntimeconfig.cache
+C:\Paypal (1)\BusinessObject\obj\Debug\net8.0\ref\PayPalRepositories.dll

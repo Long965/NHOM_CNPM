@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Python\\Paypal (1)\\BusinessObject\\BusinessObject.csproj": {}
+    "C:\\Paypal (1)\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\Python\\Paypal (1)\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Paypal (1)\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Python\\Paypal (1)\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Paypal (1)\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\Python\\Paypal (1)\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "C:\\Paypal (1)\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Python\\Paypal (1)\\BusinessObject\\obj\\",
+        "outputPath": "C:\\Paypal (1)\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

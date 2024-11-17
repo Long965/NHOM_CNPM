@@ -19,8 +19,10 @@ namespace EventFlowerExchange.Repositories.Interfaces
         //tìm theo giá
         Task<List<Flower>> GetFlowersByPriceAsync(decimal price);
         Task UpdateAsync(Flower flower);
-        //mua hoa
-
+        //lấy hình ảnh
+        Task<List<FlowerImage>> GetImagesByFlowerIdAsync(int flowerId);
+        // lấy tên
+        Task<List<Flower>> GetFlowersByNameAsync(string name);
 
     }
 }

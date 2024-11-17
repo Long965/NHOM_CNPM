@@ -8,12 +8,25 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    padding-top: 100px; /* Điều chỉnh giá trị này theo chiều cao của header */
 }
 
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Đảm bảo header có màu nền để hiển thị rõ ràng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng để header nổi bật */
     background-color: #084c47;
     color:#fff;
-    height:200px
+    height:100px
+}
+.header.shrink {
+    padding: 10px 0; /* Kích thước khi thu nhỏ */
+    height:100px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi thu nhỏ */
 }
 .header__navbar{
     display: flex;  
@@ -27,11 +40,13 @@ body {
 
 .header__navbar__list{
     display: inline-block;
-    margin:140px 15px;
+    margin:40px 15px;
     align-items:center;
     font-size:30px
 }
-
+.header.shrink .header__navbar__list {
+    margin: 40px 15px; /* Kiểu áp dụng khi header có lớp 'shrink' */
+}
 .header__navbar_item{
     display: inline-block;
     margin:40px 10px;
@@ -134,6 +149,60 @@ div.header__user::before{
     transition: border-color 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
 }
 
+/*container__product-form*/
+.container__button{
+    position:absolute;
+    margin:100px 0;
+    width: 110px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
+.addFlowerForm {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addFlowerForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.addFlowerForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.addFlowerForm input, .addFlowerForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addFlowerForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addFlowerForm button:hover {
+    background-color: #45a049;
+}
 /*container__product*/
 #productList {
     display: grid; /* Hoặc flex tùy thuộc vào layout bạn muốn */

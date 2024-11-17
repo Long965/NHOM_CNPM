@@ -26,7 +26,7 @@
             <ul class="header__menu">
                 <li class="header__navbar__list"><a href="#login">HOME</a></li>
                 <li class="header__navbar__list"><a href="#login">ABOUT</a></li>
-                <li class="header__navbar__list"><a href="#login">ORDERS</a></li>
+                <li class="header__navbar__list"><a href="#login">ORDER</a></li>
                 <li class="header__navbar__list"><a href="#login">CONTACT</a></li>
             </ul>
             <ul class="header__list">
@@ -35,13 +35,13 @@
         </nav>
     </header>
     <div class="wrapper">
-        <form action=" " method="post" id="signin" class="form" onsubmit="return validatePassword()">
+        <form action=" " method="post" id="registerForm" class="form" onsubmit="return validatePassword()">
             <h1>REGISTER</h1>
             <div class="input-box">
                 <div class="icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+                <input type="text" id="fullName" name="fullName" placeholder="Họ và Tên" required>
             </div>
             <div class="input-box">
                 <div class="icon">
@@ -70,10 +70,10 @@
             </div>
             <div id="error-message" style="color: red; display: none;"><br> Lỗi!!!</div>
             <div class="role-selection">
-                <input type="radio" id="saler" name="role" value="saler" checked>
-                <label for="saler" class="role-label">I'm a saler</label>
-                <input type="radio" id="buyer" name="role" value="buyer">
-                <label for="buyer" class="role-label">I'm a buyer</label>
+                <input type="radio" id="saler" name="role" value="Seller" checked>
+                <label for="saler" class="role-label">I'm a Seller</label>
+                <input type="radio" id="buyer" name="role" value="Buyer">
+                <label for="buyer" class="role-label">I'm a Buyer</label>
             </div>
             <button type="submit" class="butt">Đăng ký</button>
         </form>
@@ -92,7 +92,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="flower.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

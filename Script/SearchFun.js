@@ -1,3 +1,4 @@
+
 const products = [
     {
         name: 'Hoa cúc họa mi',
@@ -128,3 +129,94 @@ function displayProducts(filteredProducts) {
 window.onload = () => {
     displayProducts(products);
 };
+
+
+/*
+// Hàm lấy dữ liệu từ API và hiển thị sản phẩm
+async function fetchProducts() {
+    try {
+        // Gọi API lấy dữ liệu sản phẩm
+        const response = await fetch('https://localhost:7232/api/Flower'); // Thay URL này bằng URL của API thực tế
+        
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        const products = await response.json();
+        displayProducts(products); // Gọi hàm hiển thị sản phẩm
+    } catch (error) {
+        console.error('Có lỗi khi lấy dữ liệu:', error);
+    }
+}
+
+// Hàm hiển thị danh sách sản phẩm trên trang
+function displayProducts(filteredProducts) {
+    const productList = document.getElementById('productList');
+    productList.innerHTML = ''; // Xóa danh sách cũ
+
+    filteredProducts.forEach(product => {
+        const productItem = document.createElement('div');
+        productItem.classList.add('container__col-item');
+        productItem.innerHTML = `
+            <div class="product__item-img" style="background-image: url('${product.img}')"></div>
+            <div class="product__item-name"><h6>${product.name}</h6></div>
+            <div class="product__item-price">
+                <span class="product__item-price-old">${product.priceOld}</span>
+                <span class="product__item-price-new">${product.priceNew}</span>
+            </div>
+            <div class="add-to-cart">
+                <button class="btn-add-to-cart">Cart</button>
+            </div>
+        `;
+        productList.appendChild(productItem);
+    });
+}
+
+// Gọi hàm lấy dữ liệu khi trang được tải
+window.onload = () => {
+    fetchProducts();
+};
+*/
+
+// Hàm thêm hoa vào danh sách
+function addFlower() {
+    // Lấy thông tin từ form
+    const name = document.getElementById('productName').value;
+    const image = document.getElementById('productImage').value;
+    const priceOld = document.getElementById('productPriceOld').value;
+    const priceNew = document.getElementById('productPriceNew').value;
+    const color = document.getElementById('productColor').value;
+    const theme = document.getElementById('productTheme').value;
+
+    // Tạo một sản phẩm mới
+    const newProduct = `
+        <div class="container__col-item">
+            <div class="product__item-img" style="background-image: url('${image}')"></div>
+            <div class="product__item-name"><h6>${name}</h6></div>
+            <div class="product__item-price">
+                <span class="product__item-price-old">${priceOld}đ</span>
+                <span class="product__item-price-new">${priceNew}đ</span>
+            </div>
+            <div class="add-to-cart">
+                <button class="btn-add-to-cart">Cart</button>
+            </div>
+        </div>
+    `;
+
+    // Thêm sản phẩm vào danh sách
+    const productList = document.getElementById('productList');
+    productList.innerHTML += newProduct;
+
+    // Xóa thông tin trong form sau khi thêm
+    document.getElementById('addFlowerForm').reset();
+}
+
+ //1click nút thêm hoa
+document.getElementById('toggleAddFlowerForm').addEventListener('click', function() {
+    var form = document.getElementById('addFlowerForm');
+    if (form.style.display === 'none' || form.style.display === '') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+});

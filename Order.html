@@ -33,9 +33,9 @@
                         <a href="#">
                             <i class="fa-regular fa-user"></i>
                             <div class="header__user">
-                                <a class="header__user-item" href="Profile.html">Profile</a>
-                                <a class="header__user-item" href="Cart.html">Cart      </a>
-                                <a class="header__user-item" href="SignIn.html">Log out</a>
+                                <div><a class="header__user-item" href="Profile.html">Profile</a></div>
+                                <div><a class="header__user-item" href="Cart.html">Cart      </a></div>
+                                <div><a class="header__user-item" href="SignIn.html">Log out</a></div>
                             </div>
                         </a>
                     </li>
@@ -43,6 +43,45 @@
             </nav>
         </header>
         <div class="container">
+            <button class="container__button" id="toggleAddFlowerForm">+Add Flower...</button>
+            <div class="add-product-form"> 
+                <div>
+                    <form class="addFlowerForm" id="addFlowerForm" style="display: none;">
+                        <h2>Thêm hoa muốn bán vào đây nè</h2>
+                        <div class="form__cc">
+                            <label for="productName">Tên Hoa:</label>
+                        <input type="text" id="productName" name="productName" required><br><br>
+                
+                        <label for="productImage">URL img:</label>
+                        <input type="text" id="productImage" name="productImage" required><br><br>
+                
+                        <label for="productPriceOld">Giá Cũ:</label>
+                        <input type="text" id="productPriceOld" name="productPriceOld" required><br><br>
+                
+                        <label for="productPriceNew">Giá Mới:</label>
+                        <input type="text" id="productPriceNew" name="productPriceNew" required><br><br>
+                
+                        <label for="productColor">Màu Sắc:</label>
+                        <select id="productColor" name="productColor">
+                            <option value="bright">Tươi sáng</option>
+                            <option value="dark">Màu tối</option>
+                            <option value="multicolor">Nhiều màu</option>
+                            <option value="other">Khác</option>
+                        </select><br><br>
+                
+                        <label for="productTheme">Chủ Đề:</label>
+                        <select id="productTheme" name="productTheme">
+                            <option value="wedding">Đám cưới</option>
+                            <option value="birthday">Sinh nhật</option>
+                            <option value="opening">Khai trương</option>
+                            <option value="other">Khác</option>
+                        </select><br><br>
+                
+                        <button type="button" onclick="addFlower()">Thêm Hoa</button>
+                    </form>
+                        </div>
+                </div>
+            </div>
             <div class="container__search">
                 <div class="container__search-input">
                     <input type="text" placeholder="Nhập tên sản phẩm" id="searchInput" onkeyup="searchFlowers()">
@@ -69,6 +108,7 @@
                     </div>
                 </div>
             </div>
+            
             <div  class="container__product" >
                 <div class="background__product" id="productList">
                     <div class="container__col">
@@ -247,7 +287,6 @@
                 </div>
             </div>
         </div>
-        </div>
         <footer class="footer">
             <nav class="footer__navbar">
                 <ul class="footer__navbar_item"><h1>LOGO</h1></ul>
@@ -261,22 +300,6 @@
             </nav>
         </footer>
 
-        <script>
-            document.querySelector('.container__search-button button').addEventListener('click', () => {
-                const searchValue = document.querySelector('.container__search-input input').value;
-
-                fetch(`https://localhost:5001/api/products?Shop=${encodeURIComponent(searchValue)}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log('Dữ liệu nhận được:', data);
-                        // Xử lý và hiển thị dữ liệu trên trang HTML.
-                    })
-                    .catch(error => {
-                        console.error('Lỗi khi gọi API:', error);
-                    });
-            });
-
-        </script>
         <script src="./Script/SearchFun.js"></script>
         <script src="./Animation/Animation.js"></script>
 

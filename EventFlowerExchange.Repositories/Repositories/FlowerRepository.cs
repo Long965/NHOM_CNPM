@@ -96,6 +96,43 @@ namespace EventFlowerExchange.Repositories.Repositories
                 throw new Exception("Error deleting flower in repository", ex);
             }
         }
+        public async Task<Flower> GetFlowersByQuantity(int quantity)
+        {
+            try
+            {
+                return await _context.Flowers.FirstOrDefaultAsync(f => f.Quantity == quantity)
+                       ?? throw new KeyNotFoundException("The number of flowers is not enough");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error ", ex);
+            }
+        }
+
+        public async Task<Flower> GetFlowersByPriceAsync(decimal Price)
+        {
+            try
+            {
+                return await _context.Flowers.FirstOrDefaultAsync(f => f.PricePerUnit == Price)
+                       ?? throw new KeyNotFoundException("No price found");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error ", ex);
+            }
+        }
+        public async Task<FlowerImage> GetImageUrl(string image)
+        {
+            try
+            {
+                return await _context.FlowerImages.FirstOrDefaultAsync(f => f.ImageUrl == image)
+                       ?? throw new KeyNotFoundException("ImageUrl not found");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving ImageUrl", ex);
+            }
+        }
 
     }
 }

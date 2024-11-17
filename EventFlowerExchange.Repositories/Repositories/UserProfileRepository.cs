@@ -38,6 +38,29 @@ namespace EventFlowerExchange.Repositories.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task AddUserProfileAsync(UserProfile userProfile)
+        {
+            if (userProfile == null)
+            {
+                throw new ArgumentNullException(nameof(userProfile), "User profile cannot be null.");
+            }
+
+            try
+            {
+                // Thêm hồ sơ người dùng vào context
+                _context.UserProfiles.Add(userProfile);
+                
+                // Lưu thay đổi vào cơ sở dữ liệu
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi trong quá trình lưu dữ liệu
+                throw new InvalidOperationException("An error occurred while adding the user profile.", ex);
+            }
+        }
+
     }
 
 }

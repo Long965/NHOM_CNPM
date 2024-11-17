@@ -12,5 +12,6 @@ namespace EventFlowerExchange.Repositories.Interfaces
         Task<UserProfile> GetByUserIdAsync(int userId);
         Task UpdateAsync(UserProfile userProfile);
         Task DeleteByUserIdAsync(int userId);
+        Task AddUserProfileAsync(UserProfile userProfile);
     }
 }

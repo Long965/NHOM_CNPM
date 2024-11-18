@@ -2,6 +2,7 @@
 using EventFlowerExchange.Repositories.Interfaces;
 using EventFlowerExchange.Repositories.Repositories;
 using EventFlowerExchange.services.Services;
+using EventFlowerExchange.Webapi.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventFlowerExchange.WebApp.Controllers
@@ -177,7 +178,29 @@ namespace EventFlowerExchange.WebApp.Controllers
                 return StatusCode(500, new { message = "An error occurred while purchasing the flower.", error = ex.Message });
             }
         }
+        //thêm hình ảnh
+        [HttpGet("images/{flowerId}")]
+        public async Task<IActionResult> GetFlowerImages(int flowerId)
+        {
+            var images = await _flowerService.GetFlowerImagesAsync(flowerId);
+            if (images == null || images.Count == 0) return NotFound(new { message = "No images found for this flower." });
+            return Ok(images);
+        }
+        // lấy tên
+        [HttpGet("search")]
+        public async Task<IActionResult> GetFlowersByName([FromQuery] string name)
+        {
+            var flowers = await _flowerService.GetFlowersByNameAsync(name);
+            if (flowers == null || flowers.Count == 0)
+            {
+                return NotFound(new { message = $"No flowers found with name '{name}'." });
+            }
+            return Ok(flowers);
+        }
 
+
+        // POST api/flower
+        
     }
 
 }

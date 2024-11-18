@@ -15,7 +15,7 @@ namespace EventFlowerExchange.services.Services
 
         public FlowerService(IFlowerRepository flowerRepository)
         {
-            _flowerRepository = flowerRepository ?? throw new ArgumentNullException(nameof(flowerRepository));
+            _flowerRepository = flowerRepository;
         }
 
         public async Task<Flower> GetFlowerByIdAsync(int id)
@@ -116,10 +116,22 @@ namespace EventFlowerExchange.services.Services
             return await _flowerRepository.GetFlowersByPriceAsync(price);
         }
 
+        // Triển khai hàm lấy hình ảnh
+        public async Task<List<FlowerImage>> GetFlowerImagesAsync(int flowerId)
+        {
+            return await _flowerRepository.GetImagesByFlowerIdAsync(flowerId);
+        }
+        // Triển khai hàm lấy hoa theo tên
+        public async Task<List<Flower>> GetFlowersByNameAsync(string name)
+        {
+            return await _flowerRepository.GetFlowersByNameAsync(name);
+        }
 
-        //cập nhật số lượng hoa sau khi mua
-
+        // Phương thức thêm hoa và hình ảnh
        
 
+
+        
     }
+
 }

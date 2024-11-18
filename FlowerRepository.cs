@@ -14,6 +14,13 @@ namespace EventFlowerExchange.Repositories.Repositories
             _context = context;
         }
 
+        //thêm hoa+ ảnh
+        public void Add(Flower flower)
+        {
+            _context.Flowers.Add(flower);
+            _context.SaveChanges(); // Lưu thay đổi sau khi thêm
+        }
+
         public async Task<Flower> GetFlowerByIdAsync(int id)
         {
             try
@@ -124,8 +131,20 @@ namespace EventFlowerExchange.Repositories.Repositories
             return await _context.Flowers.FindAsync(id);
         }
 
-        
+        // Triển khai hàm lấy hình ảnh hoa
+        public async Task<List<FlowerImage>> GetImagesByFlowerIdAsync(int flowerId)
+        {
+            return await _context.FlowerImages
+                .Where(img => img.FlowerId == flowerId)
+                .ToListAsync();
+        }
 
-
+        //lấy tên
+        public async Task<List<Flower>> GetFlowersByNameAsync(string name)
+        {
+            return await _context.Flowers
+                .Where(f => f.Name.Contains(name))
+                .ToListAsync();
+        }
     }
 }
